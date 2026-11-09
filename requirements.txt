@@ -1,0 +1,7 @@
+hdx-python-api
+geopandas
+plotly
+folium
+streamlit
+pandas
+requests

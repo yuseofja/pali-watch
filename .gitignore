@@ -1,0 +1,8 @@
+.venv/
+data/raw/
+.env
+__pycache__/
+.spyproject/
+*.pyc
+.ipynb_checkpoints/
+palestine_dashboard_sprint.xlsx
