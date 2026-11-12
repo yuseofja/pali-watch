@@ -72,13 +72,32 @@ LEFT OFF HERE:
 	- go back to day 2 
 
 
-TODO today (11/11):
+TODO today (11/12):
+
+	Wrap up items from yesterday (tripped up by how to include multiple events per row)
+
 	X 0 - pick which admin boundaries to use (20 min)
 	X 1 - spatial join events to admin boundaries in new notebook called 'process events data' (30 min)
-	2 - create derived aggregate columns per governorate (1 hour)
-	3 - export data: Acled conflict events by governorate (10 min)
+		QA check: are all acled events actually confined in the admin 2 areas that they spatially joined to? plot both in QGIS and see
+	X 2 - create derived aggregate columns per governorate (1 hour)
+	X 3 - export data: Acled conflict events by governorate (10 min)
+	X finish day 3: ACLED pipeline
+
+	Finish up day 4: Coverage Data
+	0 - pull coverage data
+
+	
+	Go back to
 	4 - main takeaways from initial EDA in a mini report (text doc)
-	finish day 3
+
+	
+
+
+-------------
+POP-UP IDEAS:
+-------------
+
+- temporal controller / date slider so users can visualize events over a specified time frame / date range
 
 ---------
 DELAYING:
@@ -90,7 +109,4 @@ DELAYING:
 DESIGN CHOICES:
 ---------------
 
-TODO: decide how to handle this, some rows (e.g. Mob violence) have and EVENTS count of 200+, can't really be simplified by counting as a single event.
-
-- In acled_events_eda.ipynb and acled_events_geoprocessing.ipynb, At least for sprint 1, I am choosing to count the number of rows as the number of events for simplicity. This is therefore an underestimate, since the "EVENTS" column in df_events indicates there can be multiple occurrences of a given event at the same location in that week.
 
