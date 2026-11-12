@@ -1,0 +1,96 @@
+-------------
+STAY FOCUSED:
+-------------
+
+Goal: system-level PROACTIVE / PREVENTATIVE humanitarian intervention -- help people thrive on their land 
+
+Guiding questions:
+	1. Where are people struggling to survive in their current location / means
+	2. Where are people at risk of forcible displacement 
+
+Metrics to track:
+For each, what are the drivers?
+	What is the current level of risk from that driver?
+	What is the rate of increase of risk from that driver?
+	Where is risk projected to be in __ months?
+	How many people are projected to be displaced?
+	How many people are projected to face acute food insecurity / malnutr / starvation?
+	How many people are projected to die?
+	How does risk compare across the region?
+	Where is aid needed the most/fastest?
+	What kind of aid is needed?
+	How much and what kind of aid is available?
+	How much and what kind of aid is needed but unavailable?
+	
+
+Start with 2 - where are people at risk of forcible displacement?
+
+	Driver_a = settler attacks 
+		What is the current level of risk from that driver?
+			- num/type/result of attacks in last 30 days (raw, per capita)
+			- num/type/result attacks in last week
+		What is the rate of increase of risk from that driver?
+			- week over week rate of increase
+			- month over month rate of increase
+		Where is risk projected to be in __ months?
+			- projected num of attacks next week (based on WOW trend)
+			- projected number of attacks next month (based on MOM trend)
+		How many people are projected to be displaced/ killed?
+			- num of people within x radius of recent event locations
+			- population within "event space/red zone" (draw polygon around all outer event coordinates, and add perimeter buffer zone and see who is within x 			meters of event space / red zone, maybe even designate a yellow zone that is further out)
+		How does risk compare across the region?
+			- use a [combination of] metric(s) to create a quantifiable index / ranking 
+		Where is aid needed the most/fastest?
+			- rank by threat imminence
+
+		What kind of aid is needed?
+		How much and what kind of aid is available?
+		How much and what kind of aid is needed but unavailable?
+
+	Driver_b = other violent incidents (what other event types are there?)
+
+see claude chat for aid type (e.g. legal, protective pres, documentation, etc)
+drivers:
+	- settler attacks
+	- other violent incident types from acled data 
+
+-----
+TODO:
+-----
+
+LEFT OFF HERE: 
+	- moving forward with single dataset (acled events, starting at day 3) -- idea here is to just get the whole E2E process established and streamlined so that I have 	a better idea of what other data to include, and this data need only follow the same/similar process as the settler attack data (also I'm just excited to have a 	visual)
+
+	- create a report on west bank violence (especially settler violence) (slide deck with decision makers as intended audience)
+		- EDA
+		- insights from plotting
+		- suggestions from metric questions above 
+		- see docs/acled_analysis_notes for key preliminary findings
+
+	- go back and select 1-2 more datasets from day 1
+	- wrap up tickets from day 1
+	- go back to day 2 
+
+
+TODO today (11/11):
+	X 0 - pick which admin boundaries to use (20 min)
+	X 1 - spatial join events to admin boundaries in new notebook called 'process events data' (30 min)
+	2 - create derived aggregate columns per governorate (1 hour)
+	3 - export data: Acled conflict events by governorate (10 min)
+	4 - main takeaways from initial EDA in a mini report (text doc)
+	finish day 3
+
+---------
+DELAYING:
+---------
+
+(for the sake of pacing sprint 1 / MVP)
+
+---------------
+DESIGN CHOICES:
+---------------
+
+TODO: decide how to handle this, some rows (e.g. Mob violence) have and EVENTS count of 200+, can't really be simplified by counting as a single event.
+
+- In acled_events_eda.ipynb and acled_events_geoprocessing.ipynb, At least for sprint 1, I am choosing to count the number of rows as the number of events for simplicity. This is therefore an underestimate, since the "EVENTS" column in df_events indicates there can be multiple occurrences of a given event at the same location in that week.
+
