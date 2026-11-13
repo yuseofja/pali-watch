@@ -60,13 +60,6 @@ TODO:
 
 LEFT OFF HERE: 
 	- moving forward with single dataset (acled events, starting at day 3) -- idea here is to just get the whole E2E process established and streamlined so that I have 	a better idea of what other data to include, and this data need only follow the same/similar process as the settler attack data (also I'm just excited to have a 	visual)
-
-	- create a report on west bank violence (especially settler violence) (slide deck with decision makers as intended audience)
-		- EDA
-		- insights from plotting
-		- suggestions from metric questions above 
-		- see docs/acled_analysis_notes for key preliminary findings
-
 	- go back and select 1-2 more datasets from day 1
 	- wrap up tickets from day 1
 	- go back to day 2 
@@ -74,21 +67,17 @@ LEFT OFF HERE:
 
 TODO today (11/12):
 
-	Wrap up items from yesterday (tripped up by how to include multiple events per row)
-
-	X 0 - pick which admin boundaries to use (20 min)
-	X 1 - spatial join events to admin boundaries in new notebook called 'process events data' (30 min)
-		QA check: are all acled events actually confined in the admin 2 areas that they spatially joined to? plot both in QGIS and see
-	X 2 - create derived aggregate columns per governorate (1 hour)
-	X 3 - export data: Acled conflict events by governorate (10 min)
-	X finish day 3: ACLED pipeline
 
 	Finish up day 4: Coverage Data
 	0 - pull coverage data
 
 	
-	Go back to
-	4 - main takeaways from initial EDA in a mini report (text doc)
+	- create a report on west bank violence (especially settler violence) (slide deck with decision makers as intended audience)
+		- EDA
+		- insights from plotting
+		- suggestions from metric questions above 
+		- see docs/acled_analysis_notes for key preliminary findings
+
 
 	
 
