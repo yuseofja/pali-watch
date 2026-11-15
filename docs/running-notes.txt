@@ -7,6 +7,7 @@ Goal: system-level PROACTIVE / PREVENTATIVE humanitarian intervention -- help pe
 Guiding questions:
 	1. Where are people struggling to survive in their current location / means
 	2. Where are people at risk of forcible displacement 
+	3. Where/when are people likely to experience risk/conflict, and can we mobilize aid to prevent it?
 
 Metrics to track:
 For each, what are the drivers?
@@ -61,17 +62,30 @@ TODO:
 LEFT OFF HERE: 
 	- moving forward with single dataset (acled events, starting at day 3) -- idea here is to just get the whole E2E process established and streamlined so that I have 	a better idea of what other data to include, and this data need only follow the same/similar process as the settler attack data (also I'm just excited to have a 	visual)
 	- go back and select 1-2 more datasets from day 1
-	- wrap up tickets from day 1
-	- go back to day 2 
+	- move additional datsets through the same E2E process as the acled data
 
 
-TODO today (11/12):
+Up next, needs. Make sure this aligns with the 2023 coverage. Idea is to build a needs-based coverage score (i.e. based on need, how much coverage is there, and are there gaps or overlaps? Can/should aid be redistributed elsewhere accordingly? e.g. prioritize geographically adjacent gov's to facilitate easier logistics for operations).  Keep in mind, 2023 coverage is static, but the goal would be to build something over timeframes to
+allow for forecasting.
+
+
+TODO today (11/15):
 
 
 	Finish up day 4: Coverage Data
-	0 - pull coverage data
 
+	See below for which option to pick to move forward with coverage calculations:
+		leaning towards finding a more comprehensive data source
+		otherwise, go with option 2, and maybe include info about specific services but denote as "unsure which service applies where"
+
+	Important: I noticed that some records exist for the same CA-3 in non-location that don't exist in location version. Does this indicate some aid 
+	is not reported in location version bc it doesn't have coordinates? Maybe find a better data source...
 	
+
+
+	Figure out where to add this (likely at the end so you can include screenshots from the webapp to show how it can be used to analyze a situation and reccommend a 
+	course of action:
+
 	- create a report on west bank violence (especially settler violence) (slide deck with decision makers as intended audience)
 		- EDA
 		- insights from plotting
@@ -94,8 +108,51 @@ DELAYING:
 
 (for the sake of pacing sprint 1 / MVP)
 
+the output of each notebook should be a new layer in the same gpkg file (see NORI for implementation)
+
+- Coverage/gap analysis: geographic coverage (see notebook notebooks/3w_palestine.ipynb)
+	- this is slowing me down quite a bit because of the difference between coverage datasets. For now, moving forward with pse 3w just to establish a coverage layer 
+		PSE 3w : operational presence (and secotr) up until April 2023 
+		iat : (only what gets reported, not exhaustive) aid activity, but missing location for 30-50% of activity depending on year
+			- this dataset allows us to get much more granular in terms of timeframe and specific aid activity 
+
 ---------------
 DESIGN CHOICES:
 ---------------
+
+
+------------------
+VIOLENT CONFLICTS:
+------------------
+
+
+Conflict events are different than other risks. They are "sudden" (which is to say, they happen in a moment and then they end. This is slightly different than something like food insecurity. Aspects of violent conflict are similar -- there is a buildup, signs that things are getting worse,
+the moment things escalate (i.e. violence happens), and then a de-escalation. But it happens more suddenly than the need for food, for money, for healthcare. I need to see this in parallel. Compare aspects of risk_conflict and risk_food_insecurity. Is risk_conflict that much different in 
+terms of predictability, buildup, prevention, resolution?
+
+Precursor to this: do orgs currently respond to violent conflicts? is there an aid type that addresses this such that I can even identify gaps?
+	so yes, but its not as specific as desired (using CA-3, start date 5/25/2023 as an example):
+		I can see that an org is offering "emergency relief" to 4 locations 
+		This emergency relief comes in two forms: (1) relief coordination and support services and (2) material relief assistance and services
+		However, I don't know which of these forms is being given to which specific locations. 
+
+	**  Option 1: just stick with the higher level "emergency relief" (tradeoff: lose information)
+	*** Option 2: assume all services offered to all locations (tradeoff: likely inaccurate)
+	*   Option 3: find more cohesive data source (tradeoff: will take time)
+
+
+
+
+Sprint 1:
+    
+    Questions we want to answer:
+        - before the event was aid in place?
+        - during the event, was there aid in place?
+        - after the event, was there aid in place?
+
+Beyond:
+    Can we predict where/when future events will be? Can we mobilize aid accordingly?
+        - for future event, will the aid be there before/during/after?
+
 
 
