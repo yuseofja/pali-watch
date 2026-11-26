@@ -8,3 +8,4 @@ docs/
 *.pyc
 .ipynb_checkpoints/
 palestine_dashboard_sprint.xlsx
+virtual_documents/
